@@ -10,6 +10,11 @@
                 <a href="meme/<%= i %>"><%=memes[i].title%></a></br>
                 <img class = "homeImage" src="<%=memes[i].image%>" alt="<%=memes[i].title%>"/>
                 <p><%=memes[i].description%></p>
+                <div>
+                    <form method="POST" action="/meme/<%= i %>?_method=Delete">
+                        <input type="submit" value = "Delete Meme" />
+                    </form>
+                </div>
             </div>
         <% } %>
     </div>
